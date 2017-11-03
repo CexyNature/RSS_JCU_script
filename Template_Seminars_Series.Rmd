@@ -1,0 +1,206 @@
+---
+title: "Proposal: Seminars' series weekly overview"
+author: "Cesar Herrera"
+date: "October 2017"
+output: 
+  html_document:
+    self_contained: false
+    mathjax: null
+
+---
+<head>
+  <style type="text/css">
+    body {
+    background-color: #FFFFF0;
+    }
+    .main-container{
+    max-width: 700px;
+    width: auto;
+    margin: auto;
+    padding: 1em; 
+    background-color: #FFEFD5;
+    }
+    img{
+    -ms-interpolation-mode:bicubic;
+    }
+  </style>
+</head>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(knitr.kanle.NA = ' ')
+
+```
+
+
+
+***********
+<img src="https://egrs.jcu.edu.au/Members/jc306494/seminar-series/researh_seminars_series_banner/at_download/file" alt="James Cook University - Seminar Series" width="700">
+
+
+#<span style="color:red; font-family:Georgia; font-size:1em;">Seminar series weekly overview.</span>
+<http://www.jcu.edu.au/seminarseries>
+
+
+```{r echo=FALSE}
+seminars_files <- list.files(pattern=".csv$")
+list.seminars <- list()
+
+for (i in 1:length(seminars_files)) {
+  list.seminars[[i]] <- read.csv(seminars_files[i], colClasses = rep("character",23))
+}
+
+names(list.seminars) <- seminars_files
+
+empty_img <- "https://egrs.jcu.edu.au/Members/jc306494/seminar-series/empty_image_seminars_series/at_download/file"
+list.seminars[[1]][1,21:23] <- lapply(list.seminars[[1]][1,21:23], function(x) {x[x==""] <- empty_img;x})
+list.seminars[[2]][1,21:23] <- lapply(list.seminars[[2]][1,21:23], function(x) {x[x==""] <- empty_img;x})
+list.seminars[[3]][1,21:23] <- lapply(list.seminars[[3]][1,21:23], function(x) {x[x==""] <- empty_img;x})
+list.seminars[[4]][1,21:23] <- lapply(list.seminars[[4]][1,21:23], function(x) {x[x==""] <- empty_img;x})
+#list.seminars <-lapply(list.seminars, function(x) {x[is.na(x)] <- "";x})
+
+```
+
+
+Seminar               |                    |   Place  |
+------------                    |----                   | ------------------------      | --------------------
+**<span style="color:blue">`r list.seminars[[1]][1,1]`</span>**     | `r list.seminars[[1]][1,2]` (`r list.seminars[[1]][1,3]`)     | `r list.seminars[[1]][1,4]` | <a href="`r list.seminars[[1]][1,5]`"> <img src="`r list.seminars[[1]][1,7]`" width="200"> </a>
+**<span style="color:blue">`r list.seminars[[2]][1,1]`</span>**     | `r list.seminars[[2]][1,2]` (`r list.seminars[[2]][1,3]`)  | `r list.seminars[[2]][1,4]` | <a href="`r list.seminars[[2]][1,5]`"> <img src="`r list.seminars[[2]][1,7]`" width="200"> </a>
+**<span style="color:blue">`r list.seminars[[3]][1,1]`</span>**     | `r list.seminars[[3]][1,2]` (`r list.seminars[[3]][1,3]`) |  `r list.seminars[[3]][1,4]` | [`r list.seminars[[3]][1,7]`](`r list.seminars[[3]][1,5]`)
+**<span style="color:blue">`r list.seminars[[4]][1,1]`</span>**     | `r list.seminars[[4]][1,2]` (`r list.seminars[[4]][1,3]`)  | `r list.seminars[[4]][1,4]` | <a href="`r list.seminars[[4]][1,5]`"> <img src="`r list.seminars[[4]][1,7]`" width="200"> </a>
+
+
+#<span style="color:red; font-family:Georgia; font-size:1em;">This week:</span>
+
+***********
+
+###**<span style="color:blue">`r list.seminars[[1]][1,1]`</span>**
+
+####<u>**`r list.seminars[[1]][1,9]`**</u>
+<font size="4" color="black">`r list.seminars[[1]][1,12]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[1]][1,15]`</b></font></p>
+<font size="4" color="black">`r list.seminars[[1]][1,13]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[1]][1,16]`</b></font></p>
+<font size="4" color="black">`r list.seminars[[1]][1,14]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[1]][1,17]`</b></font></p>
+
+
+**Abstract:**
+
+`r list.seminars[[1]][1,10]`
+
+`r list.seminars[[1]][1,11]`
+
+
+<p><img src="`r list.seminars[[1]][1,21]`" alt="" align="left" onerror="this.style.display='none'"/>`r list.seminars[[1]][1,18]`</p> <BR CLEAR="LEFT">
+
+<p><img src="`r list.seminars[[1]][1,22]`" alt="" align="left">`r list.seminars[[1]][1,19]`</p> <BR CLEAR="LEFT">
+
+<p><img src="`r list.seminars[[1]][1,23]`" alt="" align="left">`r list.seminars[[1]][1,20]`</p> <BR CLEAR="LEFT">
+
+`r list.seminars[[1]][1,8]`
+
+**<span style="color:blue">`r list.seminars[[1]][1,2]` `r list.seminars[[1]][1,3]`**
+
+**<span style="color:blue">`r list.seminars[[1]][1,4]`**
+
+Find more at [`r list.seminars[[1]][1,5]`](`r list.seminars[[1]][1,5]`)
+
+Enquiries: [`r list.seminars[[1]][1,6]`]
+
+***********
+
+###**<span style="color:blue">`r list.seminars[[2]][1,1]`</span>**
+
+####<u>**`r list.seminars[[2]][1,9]`**</u>
+<font size="4" color="black">`r list.seminars[[2]][1,12]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[2]][1,15]`</b></font></p>
+<font size="4" color="black">`r list.seminars[[2]][1,13]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[2]][1,16]`</b></font></p>
+<font size="4" color="black">`r list.seminars[[2]][1,14]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[2]][1,17]`</b></font></p>
+
+
+**Abstract:**
+
+`r list.seminars[[2]][1,10]`
+
+`r list.seminars[[2]][1,11]`
+
+<p><img src="`r list.seminars[[2]][1,21]`" alt=""  align="left">`r list.seminars[[2]][1,18]`</p> <BR CLEAR="LEFT">
+
+<p><img src="`r list.seminars[[2]][1,22]`" alt=""  align="left">`r list.seminars[[2]][1,19]`</p> <BR CLEAR="LEFT">
+
+<p><img src="`r list.seminars[[2]][1,23]`" alt=""  align="left">`r list.seminars[[2]][1,20]`</p> <BR CLEAR="LEFT">
+
+
+`r list.seminars[[2]][1,8]`
+
+**<span style="color:blue">`r list.seminars[[2]][1,2]` `r list.seminars[[2]][1,3]`**
+
+**<span style="color:blue">`r list.seminars[[2]][1,4]`**
+
+Find more at [`r list.seminars[[2]][1,5]`](`r list.seminars[[2]][1,5]`)
+
+Enquiries: [`r list.seminars[[2]][1,6]`]
+
+***********
+
+###**<span style="color:blue">`r list.seminars[[3]][1,1]`</span>**
+
+####<u>**`r list.seminars[[3]][1,9]`**</u>
+<font size="4" color="black">`r list.seminars[[3]][1,12]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[3]][1,15]`</b></font></p>
+<font size="4" color="black">`r list.seminars[[3]][1,13]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[3]][1,16]`</b></font></p>
+<font size="4" color="black">`r list.seminars[[3]][1,14]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[3]][1,17]`</b></font></p>
+
+
+**Abstract:**
+
+`r list.seminars[[3]][1,10]`
+
+`r list.seminars[[3]][1,11]`
+
+
+<p><img src="`r list.seminars[[3]][1,21]`" alt=""  align="left">`r list.seminars[[3]][1,18]`</p> <BR CLEAR="LEFT">
+
+<p><img src="`r list.seminars[[3]][1,22]`" alt=""  align="left">`r list.seminars[[3]][1,19]`</p> <BR CLEAR="LEFT">
+
+<p><img src="`r list.seminars[[3]][1,23]`" alt=""  align="left">`r list.seminars[[3]][1,20]`</p> <BR CLEAR="LEFT">
+
+`r list.seminars[[3]][1,8]`
+
+**<span style="color:blue">`r list.seminars[[3]][1,2]` `r list.seminars[[3]][1,3]`**
+
+**<span style="color:blue">`r list.seminars[[3]][1,4]`**
+
+Find more at [`r list.seminars[[3]][1,5]`](`r list.seminars[[3]][1,5]`)
+
+Enquiries: [`r list.seminars[[3]][1,6]`]
+
+***********
+
+###**<span style="color:blue">`r list.seminars[[4]][1,1]`</span>**
+
+####<u>**`r list.seminars[[4]][1,9]`**</u>
+<font size="4" color="black">`r list.seminars[[4]][1,12]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[4]][1,15]`</b></font></p>
+<font size="4" color="black">`r list.seminars[[4]][1,13]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[4]][1,16]`</b></font></p>
+<font size="4" color="black">`r list.seminars[[4]][1,14]`</font> <font size="2" color="dimgray"><b>`r list.seminars[[4]][1,17]`</b></font></p>
+
+
+**Abstract:**
+
+`r list.seminars[[4]][1,10]`
+
+`r list.seminars[[4]][1,11]`
+
+
+<p><img src="`r list.seminars[[4]][1,21]`" alt=""  align="left">`r list.seminars[[4]][1,18]`</p> <BR CLEAR="LEFT">
+
+<p><img src="`r list.seminars[[4]][1,22]`" alt=""  align="left">`r list.seminars[[4]][1,19]`</p> <BR CLEAR="LEFT">
+
+<p><img src="`r list.seminars[[4]][1,23]`" alt=""  align="left">`r list.seminars[[4]][1,20]`</p> <BR CLEAR="LEFT">
+
+`r list.seminars[[4]][1,8]`
+
+**<span style="color:blue">`r list.seminars[[4]][1,2]` `r list.seminars[[4]][1,3]`**
+
+**<span style="color:blue">`r list.seminars[[4]][1,4]`**
+
+Find more at [`r list.seminars[[4]][1,5]`](`r list.seminars[[4]][1,5]`)
+
+Enquiries: [`r list.seminars[[4]][1,6]`]
